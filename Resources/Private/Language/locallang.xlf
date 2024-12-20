@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="messages" date="2024-12-14T22:28:00Z" product-name="brofix_widget">
+		<header/>
+		<body>
+			<trans-unit id="widget.title" resname="widget.title" xml:space="preserve">
+				<source>Brofix :: Check for broken links</source>
+			</trans-unit>
+			<trans-unit id="widget.description" resname="widget.description" xml:space="preserve">
+				<source>Widget for the Brofix extension, which indicates possible broken links in the dashboard.</source>
+			</trans-unit>
+			<trans-unit id="widget.buttonLabel" resname="widget.buttonLabel" xml:space="preserve">
+				<source>Check links</source>
+			</trans-unit>
+			<trans-unit id="widget.widgetHeader" resname="widget.widgetHeader" xml:space="preserve">
+				<source>Check for broken links</source>
+			</trans-unit>
+			<trans-unit id="widget.brokenLinkText" resname="widget.brokenLinkText" xml:space="preserve">
+				<source><![CDATA[<strong>%s</strong> broken links were found in this system.]]></source>
+			</trans-unit>
+			<trans-unit id="widget.missingUserRights" resname="widget.missingUserRights" xml:space="preserve">
+				<source>However, you do not have sufficient user rights to check this. Please contact an administrator or another editor with the appropriate access rights.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,5 @@
+module.tx_dashboard.view {
+  layoutRootPaths.1734098626 = EXT:brofix_widget/Resources/Private/Layouts
+  templateRootPaths.1734098626 = EXT:brofix_widget/Resources/Private/Templates
+  partialRootPaths.1734098626 = EXT:brofix_widget/Resources/Private/Partials
+}

@@ -1,0 +1,21 @@
+<?php
+
+$EM_CONF[$_EXTKEY] = [
+    'title' => 'Brofix Widget',
+    'description' => '',
+    'category' => 'be',
+    'author' => 'Jari-Hermann Ernst',
+    'author_email' => 'webdev@jhernst.de',
+    'state' => 'experimental',
+    'clearCacheOnLoad' => 0,
+    'version' => '0.0.1',
+    'constraints' => [
+        'depends' => [
+            'typo3' => '11.5.0-11.5.99',
+            'brofix' => '4.5.0-4.5.99',
+            'cms-dashboard' => '11.5.0-11.5.99',
+        ],
+        'conflicts' => [],
+        'suggests' => [],
+    ],
+];

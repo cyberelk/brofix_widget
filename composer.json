@@ -1,0 +1,36 @@
+{
+    "name": "cyberelk/brofix-widget",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [
+        {
+            "name": "Jari-Hermann Ernst",
+            "role": "Developer"
+        }
+    ],
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "typo3/cms-core": "^11.5",
+        "typo3/cms-dashboard": "^11.5",
+        "sypets/brofix": "^4.5"
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Cyberelk\\BrofixWidget\\": "Classes"
+        }
+    },
+    "replace": {
+        "typo3-ter/brofix-widget": "self.version"
+    },
+    "config": {
+        "vendor-dir": ".Build/vendor",
+        "bin-dir": ".Build/bin"
+    },
+    "extra": {
+        "typo3/cms": {
+            "web-dir": ".Build/public",
+            "extension-key": "brofix_widget"
+        }
+    }
+}
