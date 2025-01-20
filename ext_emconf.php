@@ -11,9 +11,9 @@ $EM_CONF[$_EXTKEY] = [
     'version' => '0.0.1',
     'constraints' => [
         'depends' => [
-            'typo3' => '11.5.0-11.5.99',
-            'brofix' => '4.5.0-4.5.99',
-            'cms-dashboard' => '11.5.0-11.5.99',
+            'typo3' => '12.4.0-12.4.99',
+            'brofix' => '6.3.0-6.3.99',
+            'cms-dashboard' => '12.4.0-12.4.99',
         ],
         'conflicts' => [],
         'suggests' => [],

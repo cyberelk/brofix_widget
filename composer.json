@@ -10,9 +10,9 @@
     ],
     "license": "GPL-2.0-or-later",
     "require": {
-        "typo3/cms-core": "^11.5",
-        "typo3/cms-dashboard": "^11.5",
-        "sypets/brofix": "^4.5"
+        "typo3/cms-core": "^12.4",
+        "typo3/cms-dashboard": "^12.4",
+        "sypets/brofix": "^6.3"
 
     },
     "autoload": {

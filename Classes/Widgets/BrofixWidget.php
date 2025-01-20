@@ -25,6 +25,11 @@ class BrofixWidget implements WidgetInterface
         $this->view = $view;
     }
 
+    public function getOptions(): array
+    {
+        return [];
+    }
+
     public function renderWidgetContent(): string
     {
         $this->view->setTemplate('Widget/BrofixWidget');
