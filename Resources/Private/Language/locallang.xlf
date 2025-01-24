@@ -16,10 +16,22 @@
 				<source>Check for broken links</source>
 			</trans-unit>
 			<trans-unit id="widget.brokenLinkText" resname="widget.brokenLinkText" xml:space="preserve">
-				<source><![CDATA[<strong>%s</strong> broken links were found in this system.]]></source>
+				<source>The following links should be checked in this system:</source>
 			</trans-unit>
 			<trans-unit id="widget.missingUserRights" resname="widget.missingUserRights" xml:space="preserve">
 				<source>However, you do not have sufficient user rights to check this. Please contact an administrator or another editor with the appropriate access rights.</source>
+			</trans-unit>
+			<trans-unit id="widget.everythingisfine" resname="widget.everythingisfine" xml:space="preserve">
+				<source>Everything is fine!</source>
+			</trans-unit>
+			<trans-unit id="widget.summary" resname="widget.summary" xml:space="preserve">
+				<source><![CDATA[Currently %s links are excluded from the check and %s links are ok.]]></source>
+			</trans-unit>
+			<trans-unit id="widget.faulty" resname="widget.faulty" xml:space="preserve">
+				<source>Faulty links</source>
+			</trans-unit>
+			<trans-unit id="widget.not_testable" resname="widget.not_testable" xml:space="preserve">
+				<source>Currently not checkable links</source>
 			</trans-unit>
 		</body>
 	</file>

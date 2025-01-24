@@ -2,15 +2,15 @@
 <f:layout name="Widget/Widget"/>
 <f:section name="main">
 
-    <f:if condition="{count} > 0">
+    <f:if condition="{countOverall} > 0">
         <f:then>
             <f:variable name="status">warning</f:variable>
-            <f:variable name="icon">exclamation</f:variable>
+            <f:variable name="icon">actions-exclamation-circle-alt</f:variable>
             <f:variable name="marginBottom">mb-4</f:variable>
         </f:then>
         <f:else>
             <f:variable name="status">success</f:variable>
-            <f:variable name="icon">heart</f:variable>
+            <f:variable name="icon">content-heart</f:variable>
             <f:variable name="marginBottom"></f:variable>
         </f:else>
     </f:if>
@@ -20,32 +20,62 @@
             <div class="media-body">
                 <h4 class="callout-title text-center">
                     <span class="fa-stack fa-lg callout-icon">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-{icon} fa-stack-1x"></i>
+                        <core:icon identifier="{icon}" size="medium" />
                     </span>
                     <br />
                     <f:translate key="LLL:EXT:brofix_widget/Resources/Private/Language/locallang.xlf:widget.widgetHeader" />
                 </h4>
                 <div class="callout-body text-center">
-                    <p class="{marginBottom}">
-                        <f:format.raw>{f:translate(key: 'LLL:EXT:brofix_widget/Resources/Private/Language/locallang.xlf:widget.brokenLinkText', arguments: {0: '{count}'})}</f:format.raw>
-                    </p>
-                    <f:if condition="{count} > 0">
-                        <f:if condition="{beUserAccess}">
-                            <f:then>
-                                <p>
-                                    <a href="#" data-dispatch-action="TYPO3.ModuleMenu.showModule"
-                                        data-dispatch-args-list="web_brofix" class="btn btn-info">
-                                        <f:translate key="LLL:EXT:brofix_widget/Resources/Private/Language/locallang.xlf:widget.buttonLabel" />
-                                    </a>
-                                </p>
-                            </f:then>
-                            <f:else>
-                                <p>
-                                    <f:translate key="LLL:EXT:brofix_widget/Resources/Private/Language/locallang.xlf:widget.missingUserRights" />
-                                </p>
-                            </f:else>
-                        </f:if>
+                    <f:if condition="{countOverall} > 0">
+                        <f:then>
+                            <p>
+                                <f:format.raw>{f:translate(key: 'LLL:EXT:brofix_widget/Resources/Private/Language/locallang.xlf:widget.brokenLinkText')}</f:format.raw>
+                            </p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-start list-group-item-warning">
+                                    <div class="me-auto">
+                                      <div class="fw-bold">
+                                        <f:translate key="LLL:EXT:brofix_widget/Resources/Private/Language/locallang.xlf:widget.faulty" />
+                                    </div>
+                                    </div>
+                                    <span class="badge bg-primary text-white rounded-pill">{countArray.faulty}</span>
+                                  </li>
+                                  <li class="list-group-item d-flex justify-content-between align-items-start list-group-item-warning">
+                                    <div class="me-auto">
+                                      <div class="fw-bold">
+                                        <f:translate key="LLL:EXT:brofix_widget/Resources/Private/Language/locallang.xlf:widget.not_testable" />
+                                      </div>
+                                    </div>
+                                    <span class="badge bg-primary text-white rounded-pill">{countArray.not_testable}</span>
+                                  </li>
+                            </ul>
+                            <p class="my-2">
+                                <f:translate key="LLL:EXT:brofix_widget/Resources/Private/Language/locallang.xlf:widget.summary" arguments="{0: '{countArray.excluded}', 1: '{countArray.ok}'}" />
+                            </p>
+                            <f:if condition="{beUserAccess}">
+                                <f:then>
+                                    <p>
+                                        <a href="#" data-dispatch-action="TYPO3.ModuleMenu.showModule"
+                                            data-dispatch-args-list="web_brofix" class="btn btn-info">
+                                            <f:translate key="LLL:EXT:brofix_widget/Resources/Private/Language/locallang.xlf:widget.buttonLabel" />
+                                        </a>
+                                    </p>
+                                </f:then>
+                                <f:else>
+                                    <p>
+                                        <f:translate key="LLL:EXT:brofix_widget/Resources/Private/Language/locallang.xlf:widget.missingUserRights" />
+                                    </p>
+                                </f:else>
+                            </f:if>
+                        </f:then>
+                        <f:else>
+                            <p class="fw-bold">
+                                <f:translate key="LLL:EXT:brofix_widget/Resources/Private/Language/locallang.xlf:widget.everythingisfine" />
+                            </p>
+                            <p class="my-2">
+                                <f:translate key="LLL:EXT:brofix_widget/Resources/Private/Language/locallang.xlf:widget.summary" arguments="{0: '{countArray.excluded}', 1: '{countArray.ok}'}" />
+                            </p>
+                        </f:else>
                     </f:if>
                 </div>
             </div>

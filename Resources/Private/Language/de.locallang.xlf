@@ -20,12 +20,28 @@
 				<source>Check for broken links</source>
 			</trans-unit>
 			<trans-unit id="widget.brokenLinkText" resname="widget.brokenLinkText" xml:space="preserve">
-				<target><![CDATA[In diesem System wurden <strong>%s</strong> fehlerhafte Links gefunden.]]></target>
-				<source><![CDATA[<strong>%s</strong> broken links were found in this system.]]></source>
+				<target>In diesem System sollten folgende Links überprüft werden:</target>
+				<source>The following links should be checked in this system:</source>
 			</trans-unit>
 			<trans-unit id="widget.missingUserRights" resname="widget.missingUserRights" xml:space="preserve">
 				<target>Sie besitzen allerdings keine ausreichenden Nutzerrechte, um diese zu überprüfen. Bitte wenden Sie sich an einen Administrator oder einen anderen Redakteur mit entsprechenden Zugriffsrechten.</target>
 				<source>However, you do not have sufficient user rights to check this. Please contact an administrator or another editor with the appropriate access rights.</source>
+			</trans-unit>
+			<trans-unit id="widget.everythingisfine" resname="widget.everythingisfine" xml:space="preserve">
+				<target>Alles ist in Ordnung!</target>
+				<source>Everything is fine!</source>
+			</trans-unit>
+			<trans-unit id="widget.summary" resname="widget.summary" xml:space="preserve">
+				<target><![CDATA[Aktuell sind %s Links von der Überprüfung ausgeschlossen und %s Links in Ordnung.]]></target>
+				<source><![CDATA[Currently %s links are excluded from the check and %s links are ok.]]></source>
+			</trans-unit>
+			<trans-unit id="widget.faulty" resname="widget.faulty" xml:space="preserve">
+				<target>Fehlerhafte Links</target>
+				<source>Faulty links</source>
+			</trans-unit>
+			<trans-unit id="widget.not_testable" resname="widget.not_testable" xml:space="preserve">
+				<target>Aktuell nicht prüfbare Links</target>
+				<source>Currently not checkable links</source>
 			</trans-unit>
 		</body>
 	</file>
