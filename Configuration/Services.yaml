@@ -7,13 +7,12 @@ services:
   Cyberelk\BrofixWidget\:
     resource: '../Classes/*'
 
-  dashboard.widget.brofix:
+  dashboard.widget.Cyberelk.BrofixWidget.brofixwidget:
     class: 'Cyberelk\BrofixWidget\Widgets\BrofixWidget'
     arguments:
-      $view: '@dashboard.views.widget'
     tags:
       - name: dashboard.widget
-        identifier: 'brofix'
+        identifier: 'brofixwidget'
         groupNames: 'general'
         title: 'LLL:EXT:brofix_widget/Resources/Private/Language/locallang.xlf:widget.title'
         description: 'LLL:EXT:brofix_widget/Resources/Private/Language/locallang.xlf:widget.description'
