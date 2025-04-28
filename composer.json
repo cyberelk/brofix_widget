@@ -10,8 +10,8 @@
     ],
     "license": "GPL-2.0-or-later",
     "require": {
-        "typo3/cms-core": "^12.4",
-        "typo3/cms-dashboard": "^12.4",
+        "typo3/cms-core": "^13.4",
+        "typo3/cms-dashboard": "^13.4",
         "sypets/brofix": "^6.3"
 
     },
